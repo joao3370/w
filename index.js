@@ -59,7 +59,7 @@ const vcard = 'BEGIN:VCARD\n'
             + 'VERSION:3.0\n' 
             + 'FN:joao\n' // Nama kamu
             + 'ORG:Lexa;\n' // Nama bot
-            + 'TEL;type=CELL;type=VOICE;waid=5548991635455:+55 699373-3829\n' //Nomor whatsapp kamu
+            + 'TEL;type=CELL;type=VOICE;waid=5548991635455:\n' //Nomor whatsapp kamu
             + 'END:VCARD'
 prefix = '/','*','.'
 blocked = []
@@ -224,7 +224,7 @@ async function starts() {
 				} catch {
 					ppimg = 'https://i0.wp.com/www.gambarunik.id/wp-content/uploads/2019/06/Top-Gambar-Foto-Profil-Kosong-Lucu-Tergokil-.jpg'
 				}
-				teks = `𝙊𝙡𝙖́ ◤◢ @${num.split('@')[0]} ◤◢◣\n𝘽𝙚𝙢 𝙫𝙞𝙣𝙙𝙤 𝙖𝙤 𝙜𝙧𝙪𝙥𝙤:n/━━━━❰･ *${mdata.subject}* ･❱━━━━\n\n𝙋𝙤𝙧 𝙛𝙖𝙫𝙤𝙧 𝙡𝙚𝙞𝙖 𝙖𝙨 𝙧𝙚𝙜𝙧𝙖𝙨\n E 𝙨𝙚𝙟𝙖 𝙛𝙚𝙡𝙞𝙯 𝙣𝙤 𝙜𝙧𝙪𝙥𝙤🤗️`
+				teks = `𝙊𝙡𝙖́ ◤◢ @${num.split('@')[0]} ◤◢◣\n𝘽𝙚𝙢 𝙫𝙞𝙣𝙙𝙤 𝙖𝙤 𝙜𝙧𝙪𝙥𝙤:n/━━━━❰･ *${mdata.subject}* ･❱━━━━\n\n𝙋𝙤𝙧 𝙛𝙖𝙫𝙤𝙧 𝙡𝙚𝙞𝙖 𝙖𝙨 𝙧𝙚𝙜𝙧𝙖𝙨\n Seja feliz`
 				let buff = await getBuffer(ppimg)
 				client.sendMessage(mdata.id, buff, MessageType.image, {caption: teks, contextInfo: {"mentionedJid": [num]}})
 				client.sendMessage(from, tujuh, MessageType.audio, {quoted: mek, mimetype: 'audio/mp4', ptt:true})
